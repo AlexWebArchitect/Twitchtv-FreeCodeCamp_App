@@ -9,7 +9,7 @@ function  apicall() {
         var eslstatus = esldata.stream;
         var eslgame = esldata.stream.game;
         if (eslstatus == null) $("#eslstatus").html("offline");
-        else $("#eslstatus").html(eslgame);
+        else $("#eslstatus").html(eslgame + " " + esldata.stream.channel.status);
         console.log(esldata);
     });
 }
