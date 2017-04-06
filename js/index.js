@@ -7,9 +7,9 @@ function  apicall() {
     });
     $.getJSON('https://wind-bow.gomix.me/twitch-api/streams/ESL_SC2?callback=?', function (esldata) {
         var eslstatus = esldata.stream;
-        var eslgame = esldata.stream.game;
+        var esldescription = esldata.stream.game  + " " + esldata.stream.channel.status;
         if (eslstatus == null) $("#eslstatus").html("offline");
-        else $("#eslstatus").html(eslgame + " " + esldata.stream.channel.status);
+        else $("#eslstatus").html(esldescription);
         console.log(esldata);
     });
 }
