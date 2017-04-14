@@ -17,6 +17,7 @@ function main() {
                    var description = '<p>' + data.stream.game + " " + data.stream.channel.status + '</p>';
                    $(datai).html(description);
                }
+               $(#embed).html("<iframe src='http://player.twitch.tv/?channel={"channels[i]"}' height='720' width='1280' frameborder='0' scrolling='no' allowfullscreen='true'></iframe>")
            });
        })(i);
     }
