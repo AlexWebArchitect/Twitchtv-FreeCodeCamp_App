@@ -9,6 +9,7 @@ function main() {
                $(name).html(link);
                var status = data.stream;
                var datai = "#data" + i;
+               var embedi = "#embed" + i;
                if (status == null) {
                    var offline = "<p>offline</p>";
                    $(datai).html(offline);
@@ -16,8 +17,11 @@ function main() {
                else {
                    var description = '<p>' + data.stream.game + " " + data.stream.channel.status + '</p>';
                    $(datai).html(description);
+                   var stream = "<iframe src='http://player.twitch.tv/?channel={" +
+                                                channels[i]
+                                + "}' height='720' width='1280' frameborder='0' scrolling='no' allowfullscreen='true'></iframe>";
+                   $(embedi).html(stream);
                }
-               $(#embed).html("<iframe src='http://player.twitch.tv/?channel={"channels[i]"}' height='720' width='1280' frameborder='0' scrolling='no' allowfullscreen='true'></iframe>")
            });
        })(i);
     }
