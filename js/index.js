@@ -1,5 +1,5 @@
 function main() {
-    var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
+    var channels = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas", "Hist__"];
     for (var i = 0; i < channels.length - 1; i++) {
        var call = 'https://wind-bow.gomix.me/twitch-api/streams/' + channels[i] + '?callback=?';
         (function (i) {
